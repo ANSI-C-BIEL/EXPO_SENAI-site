@@ -128,12 +128,50 @@
 
 /* ------------------------------------------------------------------- */
 
-@media only screen and (min-width: 500px) and (max-width: 915px){
 
+
+@media (max-width: 600px){
+
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #e7e7e7;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+
+  /*
   body {
-    /* overflow-y: hidden;  Hide vertical scrollbar */
+     overflow-y: hidden;  Hide vertical scrollbar 
     overflow-x: hidden;
-    /* Hide horizontal scrollbar */
+     Hide horizontal scrollbar 
   }
 
   #header {
@@ -208,7 +246,7 @@
     padding: 0;
     margin: 0;
   }
-
+*/
   .conversor{
     margin-top: 70px;
   }
