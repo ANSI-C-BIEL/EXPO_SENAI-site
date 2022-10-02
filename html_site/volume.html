@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css_site/style.css">
-    <link rel="stylesheet" href="./css_site/reponsivoCelular.css">
+    <link rel="stylesheet" href="../css_site/style.css">
+    <link rel="stylesheet" href="../css_site/reponsivoCelular.css">
     <link rel="shortcut icon" href="https://www.ufrgs.br/neo/wp-content/uploads/2019/11/logomarca-oficial-SENAI.jpg"
     type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script defec src="js/jquery-3.6.1.min.js"></script>
     <script defec src="js/bootstrap.min.js"></script>
-    <script defer src="./js_site/reponsivo-menu.js"></script>
-    <script defer src="./js_site/SImetros.js"></script>
+    <script defer src="../js_site/reponsivo-menu.js"></script>
+    <script defer src="../js_site/SImetros.js"></script>
     <title>Expo_SENAI</title>
 </head>
 
@@ -25,7 +25,7 @@
         <nav id="nav">
             <ul id="menu" role="menu">
                 <li class="li-decoracao"><a href="../index.html" class="a-decoracao">INICIO</a></li>
-                <li class="li-decoracao"><a href=".conversor.html" class="a-decoracao">CONVERSO</a></li>
+                <li class="li-decoracao"><a href="./conversor.html" class="a-decoracao">CONVERSO</a></li>
                 <li class="li-decoracao"><a href="./bonus.html" class="a-decoracao">BONUS</a></li>
                 <li class="li-decoracao"><a href="#" class="a-decoracao">LINK EXCEL</a></li>
             </ul>
@@ -56,13 +56,13 @@
                 </div>
             <div id="div-input-volume-principal">
                 <div class="div-input-volume">
-                    <div class="disign-input-volume">
+                    <div class="disign-input-volume grupo-div-volume">
                         <input type="radio" 
                         id="km" 
                         name="conversorDeMetros" class="input radio" value='KM' tabindex="2" />
                         <label for="km">Quilômetro</label>
                     </div>
-                    <div class="disign-input-volume">
+                    <div class="disign-input-volume grupo-div-volume">
                         <input type="radio" 
                         id="hm" 
                         name="conversorDeMetros" 
@@ -71,7 +71,7 @@
                         tabindex="3" />
                         <label for="hm">Hectômetro</label>
                     </div>
-                    <div class="disign-input-volume">
+                    <div class="disign-input-volume grupo-div-volume">
                         <input type="radio" 
                         id="hm" 
                         name="conversorDeMetros" 
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="div-input-volume">
-                    <div class="disign-input-volume">
+                    <div class="disign-input-volume grupo-div-volume ">
                         <input type="radio" 
                         id="m" 
                         name="conversorDeMetros" 
@@ -91,7 +91,7 @@
                         tabindex="5" />
                         <label for="m">Metro</label>
                     </div>
-                    <div class="disign-input-volume">
+                    <div class="disign-input-volume grupo-div-volume" >
                         <input type="radio" 
                         id="dm" 
                         name="conversorDeMetros" 
@@ -100,7 +100,7 @@
                         tabindex="6" />
                         <label for="dm">Decímetro</label>
                     </div>
-                    <div class="disign-input-volume">
+                    <div class="disign-input-volume grupo-div-volume">
                         <input type="radio" 
                         id="cm" 
                         name="conversorDeMetros" 
@@ -110,7 +110,7 @@
                         <label for="cm">Centímetro</label>
                     </div>
                 </div>
-                <div id="div-input-volume-label">
+                <div id="div-input-volume-label" class="grupo-div-volume"> 
                     <input type="radio" 
                     id="mm" 
                     name="conversorDeMetros" 
@@ -123,7 +123,6 @@
             </div>
         </section>
         <section class="form-group buttom-classe-volume">
-
             <button type="submit" class="btn btn-primary desativado botao" id="btnConverter"
                 onClick="ativarBotao(); bloquarBotao()" disabled>ENVIAR</button>
             <button type="reset" class="btn btn-danger botao" id="btnLimpar" tabindex="7">APAGAR</button>

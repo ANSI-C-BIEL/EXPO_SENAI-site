@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_site/style.css">
+    <link rel="stylesheet" href="../css_site/reponsivoCelular.css">
+    <link rel="shortcut icon" href="https://www.ufrgs.br/neo/wp-content/uploads/2019/11/logomarca-oficial-SENAI.jpg" type="image/x-icon" >
+    <script defer src="/js_site/reponsivo-menu.js"></script>
+    <script defec src="/js/jquery-3.6.1.min.js"></script> 
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text"> 
+    <script defec src="../js/bootstrap.min.js"></script> 
+    <title>Expo_SENAI</title>
+</head>
+<body>
+    <header id="header">
+        <img aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false" src="../img/logo-senai-azul2.png" alt="logo-senai-azul2" class="logo" >
+        <nav id="nav">   
+            <ul id="menu" role="menu">
+                <li class="li-decoracao"><a href="../index.html" class="a-decoracao">INICIO</a></li>
+                <li class="li-decoracao"><a href="./conversor.html" class="a-decoracao">CONVERSO</a></li>
+                <li class="li-decoracao"><a href="#" class="a-decoracao">LINK EXCEL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr class="MinaDoCori">
+    <main>
+        <h1>Conversor de Real para principais moedas de troca</h1>
+    <section class='container'>
+        <div class='form-group'>
+            <label for="valorEmReal">R$</label>
+            <input
+                type="number"
+                name="valorEmReal"
+                id="valorEmReal"
+                class='input'
+                step='0.01'
+                min='0.00'
+                max='9999999999.99'
+                value=''
+                tabindex="1"
+                onClick='ativarBotao()'
+                onChange='ativarBotao()'
+                autofocus
+                required
+            />
+       </div>
+       <section class="form-group">
+            <input
+                type="radio"
+                id='dolar'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Dólar'
+                tabindex="2"
+            /> <label for="dolar">Dólar Americano</label>
+            <input
+                type="radio"
+                id='euro'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Euro'
+                tabindex="3"
+            /> <label for="euro">Euro</label>
+            <input
+                type="radio"
+                id='libra'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Libra'
+                tabindex="4"
+            /> <label for="libra">Libra esterlina</label>
+            <input
+                type="radio"
+                id='iene'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Iene'
+                tabindex="5"
+            /> <label for="iene">Iene</label>
+            <input
+                type="radio"
+                id='dolarAu'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='DolarAu'
+                tabindex="6"
+            /> <label for="dolarAu">Dólar Australiano</label>
+            <input
+                type="radio"
+                id='franco'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Franco'
+                tabindex="8"
+            /> <label for="franco">Franco Suíço</label>
+            <input
+                type="radio"
+                id='dolarCa'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='DolarCa'
+                tabindex="9"
+            /> <label for="dolarCa">Dólar Canadense</label>
+            <input
+                type="radio"
+                id='franco'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Franco'
+                tabindex="10"
+            /> <label for="franco">Renminbi &#40;Yuan&#41;</label>
+       </section>
+       <div class="form-group">
+            <button type="submit" class="btn btn-primary desativado botao" id="btnConverter"
+            onClick="ativarBotao(); bloquarBotao()" disabled>ENVIAR</button>
+            <button type="reset" class="btn btn-danger botao" id="btnLimpar" tabindex="7">APAGAR</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="instrucoes">
+            <p class='centro' id='aviso'>Digite o valor, escolha a moeda de conversão</p>
+        </div>
+    </section>
+
+    </main>
+</body>
+</html>
