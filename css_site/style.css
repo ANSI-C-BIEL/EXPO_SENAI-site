@@ -384,8 +384,39 @@ input {
     justify-content: center;
 }
 
-.container-moeda-pais {
+#valorEmReal {
+    width: 300px;
+    height: 50px;
+}
 
+.container-moeda-pais {
     margin-top: 50px;
 }
+
+.margin-moeda{
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    padding: 0 10px;
+}
+
+.input-moeda-pais {
+
+    border: #1f1e1e 3px solid;
+    border-radius: 1000px;
+    box-shadow: 7px 7px #1f1e1e;
+}
+
+.btn {
+    border-radius: 1000px;
+    width: 200px;
+}
+
+.moeda-pais-resposta {
+    padding: 0 5px;
+    padding-left: 10px;
+}
+
+
+
 
