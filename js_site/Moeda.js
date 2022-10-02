@@ -16,7 +16,7 @@ console.log(btnConverter)
 let btnLimpar    = document.querySelector('#btnLimpar')
 
 // COTACOES DO DIA 21/09/2021   // 22/09/2021
-let valorDoDolar   = 5.31       // 5.28
+let valorDoDolar   = 5.41      // 5.28
 let valorDoEuro    = 6.23       // 6.20
 let valorDaLibra   = 7.26       // 7.20
 let valorDoBitcoin = 229762.85  // 224115,01 as 14:16 UTC ou 11:19
@@ -77,23 +77,43 @@ btnConverter.addEventListener('click', function() {
     switch(moedaEstrangeira) {
         
         case 'Dólar':
-            moedaConvertida = valorEmReal / valorDoDolar
+            moedaConvertida = valorEmReal * 5.41
             mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'USD' }))
         break
 
         case 'Euro':
-            moedaConvertida = valorEmReal / valorDoEuro
+            moedaConvertida = valorEmReal * 5.31
             mensagemFormatada(moedaConvertida.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }))
         break
 
         case 'Libra':
-            moedaConvertida = valorEmReal / valorDaLibra
+            moedaConvertida = valorEmReal * 6.030 
             mensagemFormatada(moedaConvertida.toLocaleString('en-GB', { style: 'currency', currency: 'GBP' }))
         break
 
-        case 'Bitcoins':
-            moedaConvertida = valorEmReal / valorDoBitcoin
-            mensagemFormatada(parseFloat(moedaConvertida).toFixed(5))
+        case 'Iene':
+            moedaConvertida = valorEmReal * 0.037
+            mensagemFormatada(moedaConvertida.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY', maximumSignificantDigits: 9}))
+        break
+
+        case 'DolarAu':
+            moedaConvertida = valorEmReal * 3.47
+            mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'AUD' }))
+        break
+
+        case 'Franco':
+            moedaConvertida = valorEmReal * 5.50
+            mensagemFormatada(moedaConvertida.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY'}))
+        break
+
+        case 'DolarCa':
+            moedaConvertida = valorEmReal * 3.92
+            mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'CAD'}))
+        break
+
+        case 'Yuan':
+            moedaConvertida = valorEmReal * 0.76
+            mensagemFormatada(moedaConvertida.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY'}))
         break
     
         default:

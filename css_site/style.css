@@ -379,19 +379,13 @@ input {
 
 /* ------------------------------------------------------------- */
 
-.input-moeda-pais {
-    /*
-    border: #1f1e1e 3px solid !important;
-    border-radius: 1000px;*/
-    /*  border: 0.5rem outset #1f1e1e;
-      outline: 0.5rem solid #1f1e1e;
-      box-shadow: 0 0 0 1.7rem #2275c7;
-      border-radius: 1000px;
-      font: bold 1rem sans-serif;
-      margin: 2rem;
-      padding: 1rem;
-      outline-offset: 0.5rem;
-      margin-top: 80px;
-      */
-  }
+#h1-moedaPais {
+    display: flex;
+    justify-content: center;
+}
+
+.container-moeda-pais {
+
+    margin-top: 50px;
+}
 
