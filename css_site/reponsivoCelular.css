@@ -137,4 +137,64 @@
   #cript-moeda {
     margin-top: 50px;
   }
+
+  /* -------------------------------------------------------------------- */
+
+  #h1-moedaPais {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: justify;
+    padding: 0 20px;
+  }
+
+  #label-real {
+    margin-left: 0px;
+
+    
+  }
+
+  #moeda-real {
+    font-size: 40px;
+  }
+
+  #valorEmReal {
+    width: 200px;
+    height: 45px;
+  }
+
+  #input-moeda {
+
+  }
+
+  .label-moeda {
+    font-size: 20px;
+    color: #145EA8;
+
+    padding-left: 5px;
+    
+  }
+
+  .input-moeda-pais {
+
+    border: #1f1e1e 3px solid !important;
+    border-radius: 1000px;
+    box-shadow: 7px 7px #1f1e1e;
+
+    width: 200px;
+    margin: 20px 10px;
+  }
+
+  #primeira-div-input-moeda {
+    display: flex;
+  }
+  #segunda-div-input-moeda {
+    display: flex;
+  }
+  #terceira-div-input-moeda {
+    display: flex;
+  }
+  #quarta-div-input-moeda {
+    display: flex;
+  }
+  
 }
