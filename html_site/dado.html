@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_site/style.css">
+    <link rel="stylesheet" href="../css_site/reponsivoCelular.css">
+    <link rel="shortcut icon" href="https://www.ufrgs.br/neo/wp-content/uploads/2019/11/logomarca-oficial-SENAI.jpg" type="image/x-icon" >
+    <script defer src="../js_site/reponsivo-menu.js"></script>
+    <title>Expo_SENAI</title>
+</head>
+<body>
+    <header id="header">
+        <img aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false" src="../img/logo-senai-azul2.png" alt="logo-senai-azul2" class="logo" >
+        <nav id="nav">   
+            <ul id="menu" role="menu">
+                <li class="li-decoracao"><a href="../index.html" class="a-decoracao">INÍCIO</a></li>
+                <li class="li-decoracao"><a href="./conversor.html" class="a-decoracao">CONVERSOR</a></li>
+                <li class="li-decoracao"><a href="#" class="a-decoracao">LINK EXCEL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr class="MinaDoCori">
+    <main id="main-dado">
+        <h1>Conversor de BYTE!!</h1>
+
+        <section id="content-dado">
+            <div class='form-group div-input-dado'>
+                <label for="valorEmByte">B:</label>
+                <input
+                    type="number"
+                    name="valorEmByte"
+                    id="valorEmByte"
+                    class='input'
+                    step='0.01'
+                    min='0.00'
+                    max='9999999999.99'
+                    value=''
+                    tabindex="1"
+                    onClick='ativarBotao()'
+                    onChange='ativarBotao()'
+                    autofocus
+                    required
+                />
+           </div>
+           <section class="form-group">
+                <div>
+                    <input
+                        type="radio"
+                        id='bit'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Bit'
+                        tabindex="2"
+                    /> <label for="bit">Bit</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id='kilobit'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Kilobit'
+                        tabindex="3"
+                    /> <label for="kilobit">Kilobit</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id='degabit'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Megabit'
+                        tabindex="4"
+                    /> <label for="degabit">Megabit</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id='gigabit'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Gigabit'
+                        tabindex="5"
+                    /> <label for="gigabit">Gigabit</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id='terabit'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Terabit'
+                        tabindex="6"
+                    /> <label for="terabit">Terabit</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id='kilobyte'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Kilobyte'
+                        tabindex="9"
+                    /> <label for="Kilobyte">Kilobyte</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id='megabyte'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Megabyte'
+                        tabindex="10"
+                    /> <label for="megabyte">Megabyte</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id='gigabyte'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Gigabyte'
+                        tabindex="11"
+                    /> <label for="gigabyte">Gigabyte</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id='terabyte'
+                        name="dadoEstrangeira"
+                        class="input radio"
+                        value='Terabyte'
+                        tabindex="12"
+                    /> <label for="Terabyte">Terabyte</label>
+                </div>
+           
+                <div class="form-group">
+                    <button class='desativado botao' id='btnConverter'
+                    onClick='ativarBotao(); bloquearBotao()' disabled>Converter</button>
+                    <button type="reset" class='botao' id='btnLimpar' tabindex="7">Limpar</button>
+                </div>
+            </section>
+            <div class="instrucoes">
+                <p class='centro' id='aviso'>Digite o valor, escolha a moeda e converter</p>
+            </div>
+
+    </main>
+</body>
+</html>
