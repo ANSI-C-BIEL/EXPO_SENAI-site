@@ -1,6 +1,3 @@
-
-/* Aula 18 de JS Conversor de Moedas  */
-
 /* SELECIONAR ELEMENTOS */
 // selecionar input com o numero digitado
 let valorDigitado = document.querySelector('#valorEmReal')
@@ -15,11 +12,6 @@ let btnConverter = document.querySelector('#btnConverter')
 console.log(btnConverter)
 let btnLimpar    = document.querySelector('#btnLimpar')
 
-// COTACOES DO DIA 21/09/2021   // 22/09/2021
-let valorDoDolar   = 5.41      // 5.28
-let valorDoEuro    = 6.23       // 6.20
-let valorDaLibra   = 7.26       // 7.20
-let valorDoBitcoin = 229762.85  // 224115,01 as 14:16 UTC ou 11:19
 let valorEmReal    = 0
 
 let moedaEstrangeira = ''

@@ -1,37 +1,30 @@
 
-/* Aula 18 de JS Conversor de Moedas  */
 
-/* SELECIONAR ELEMENTOS */
-// selecionar input com o numero digitado
 let valorDigitado = document.querySelector('#valorEmMetros2')
 
-// selecionar os elementos radios (criar um array deles)
+
 let moedaSelecionada = document.getElementsByName('areaEstrangeira')
 
 let aviso = document.querySelector('#aviso')
 
-// selecionar os botoes
+
 let btnConverter = document.querySelector('#btnConverter')
 let btnLimpar    = document.querySelector('#btnLimpar')
 
-// COTACOES DO DIA 21/09/2021   // 22/09/2021
-let valorDoDolar   = 5.31       // 5.28
-let valorDoEuro    = 6.23       // 6.20
-let valorDaLibra   = 7.26       // 7.20
-let valorDoBitcoin = 229762.85  // 224115,01 as 14:16 UTC ou 11:19
+
 let valorEmReal    = 0
 
 let areaEstrangeira = ''
 let areaConvertida  = 0.00
 
-// MENSAGEM FORMATADA PARA EXIBIR VALORES MONETARIOS
+
 function mensagemFormatada(areaEstrangeira) {
     isNaN(valorEmByte) ? valorEmByte = 0 : ''
     console.log("Moeda Convertida " + areaEstrangeira)
     aviso.textContent = "O valor em metro" + (valorEmByte) + " convertido em " + areaEstrangeira + " é " + areaEstrangeira
 }
 
-/* VERIFICAR SE FOI DIGITADO ALGUM VALOR PARA PODER CONVERTER */
+
 function bloquearBotao() {
     if(valorDigitado.value == 0 || valorDigitado == '' || valorDigitado == null) {
         btnConverter.setAttribute('disabled', 'disabled')
@@ -40,7 +33,7 @@ function bloquearBotao() {
     }
 }
 
-// REATIVAR BOTAO
+
 function ativarBotao() {
     if(valorDigitado.value > 0) {
         btnConverter.removeAttribute('disabled')
@@ -51,10 +44,8 @@ function ativarBotao() {
     }
 }
 
-// VERIFICAR QUAL BOTAO RADIO ESTA MARCADO checked ou checked == true
-// vincular a verificacao a um evento, click no botao Converter
+
 btnConverter.addEventListener('click', function() {
-    // FAZER o parseFloat dos valores monetarios (converter String para Float)
     valorEmByte = parseFloat(valorDigitado.value)
 
     console.log('Escolhe a moeda estrangeira')
@@ -65,14 +56,8 @@ btnConverter.addEventListener('click', function() {
         }
     }
 
-    /*
-    Use uma estrutura escolha caso para escolher
-    qual e a moeda estrangeira que foi selecionada
-    */
+   
 
-// {moedaConvertida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-// CONVERSAO DE MOEDAS
-// Operacao basica pegar moedaEstrangeira e dividir pelo valorEmReal
     switch(areaEstrangeira) {
         
         case 'pes':
