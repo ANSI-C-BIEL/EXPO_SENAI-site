@@ -77,42 +77,42 @@ btnConverter.addEventListener('click', function() {
     switch(moedaEstrangeira) {
         
         case 'Dólar':
-            moedaConvertida = valorEmReal / 5.41
+            moedaConvertida = valorEmReal / 5.20
             mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'USD' }))
         break
 
         case 'Euro':
-            moedaConvertida = valorEmReal / 5.31
+            moedaConvertida = valorEmReal / 5.07
             mensagemFormatada(moedaConvertida.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }))
         break
 
         case 'Libra':
-            moedaConvertida = valorEmReal / 6.030 
+            moedaConvertida = valorEmReal / 5.76
             mensagemFormatada(moedaConvertida.toLocaleString('en-GB', { style: 'currency', currency: 'GBP' }))
         break
 
         case 'Iene':
-            moedaConvertida = valorEmReal / 0.037
+            moedaConvertida = valorEmReal / 0.036
             mensagemFormatada(moedaConvertida.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY', maximumSignificantDigits: 9}))
         break
 
         case 'DolarAu':
-            moedaConvertida = valorEmReal / 3.47
+            moedaConvertida = valorEmReal / 3.32
             mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'AUD' }))
         break
 
         case 'Franco':
-            moedaConvertida = valorEmReal / 5.50
+            moedaConvertida = valorEmReal / 5.23
             mensagemFormatada(moedaConvertida.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY'}))
         break
 
         case 'DolarCa':
-            moedaConvertida = valorEmReal / 3.92
+            moedaConvertida = valorEmReal / 3.78
             mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'CAD'}))
         break
 
         case 'Yuan':
-            moedaConvertida = valorEmReal / 0.76
+            moedaConvertida = valorEmReal / 0.73
             mensagemFormatada(moedaConvertida.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY'}))
         break
     
