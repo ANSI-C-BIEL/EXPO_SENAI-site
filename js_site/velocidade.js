@@ -3,10 +3,10 @@
 
 /* SELECIONAR ELEMENTOS */
 // selecionar input com o numero digitado
-let valorDigitado = document.querySelector('#valorEmReal')
+let valorDigitado = document.querySelector('#valorEmVel')
 
 // selecionar os elementos radios (criar um array deles)
-let moedaSelecionada = document.getElementsByName('moedaEstrangeira')
+let velSelecionada = document.getElementsByName('conversorDeVel')
 
 let aviso = document.querySelector('#aviso')
 
@@ -22,14 +22,14 @@ let valorDaLibra   = 7.26       // 7.20
 let valorDoBitcoin = 229762.85  // 224115,01 as 14:16 UTC ou 11:19
 let valorEmReal    = 0
 
-let moedaEstrangeira = ''
-let moedaConvertida  = 0.00
+let velEstrangeira = ''
+let velocidadeConvertida  = 0.00
 
 // MENSAGEM FORMATADA PARA EXIBIR VALORES MONETARIOS
-function mensagemFormatada(moedaConvertida) {
+function mensagemFormatada(velocidadeConvertida) {
     isNaN(valorEmReal) ? valorEmReal = 0 : ''
-    console.log("Moeda Convertida " + moedaConvertida)
-    aviso.textContent = "O valor " + (valorEmReal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + " convertido em " + moedaEstrangeira + " é " + moedaConvertida
+    console.log("Velocidade Convertida " + velocidadeConvertida)
+    aviso.textContent = "A velocidade " + (valorEmVel) + " convertido em " + velEstrangeira + " é " + velocidadeConvertida
 }
 
 /* VERIFICAR SE FOI DIGITADO ALGUM VALOR PARA PODER CONVERTER */
@@ -56,13 +56,13 @@ function ativarBotao() {
 // vincular a verificacao a um evento, click no botao Converter
 btnConverter.addEventListener('click', function() {
     // FAZER o parseFloat dos valores monetarios (converter String para Float)
-    valorEmReal = parseFloat(valorDigitado.value)
+    valorEmVel = parseFloat(valorDigitado.value)
 
     console.log('Escolhe a moeda estrangeira')
-    for(let i = 0; i < moedaSelecionada.length; i++) {
-        if(moedaSelecionada[i].checked) {
-            moedaEstrangeira = moedaSelecionada[i].value
-            console.log(moedaEstrangeira)
+    for(let i = 0; i < velSelecionada.length; i++) {
+        if(velSelecionada[i].checked) {
+            velEstrangeira = velSelecionada[i].value
+            console.log(velEstrangeira)
         }
     }
 
@@ -74,11 +74,11 @@ btnConverter.addEventListener('click', function() {
 // {moedaConvertida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 // CONVERSAO DE MOEDAS
 // Operacao basica pegar moedaEstrangeira e dividir pelo valorEmReal
-    switch(moedaEstrangeira) {
+    switch(velEstrangeira) {
         
         case 'Dólar':
-            moedaConvertida = valorEmReal / 5.41
-            mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'USD' }))
+            velConvertida = valorEmVel * 1,60934
+            mensagemFormatada(velConvertida)
         break
 
         case 'Euro':
@@ -119,7 +119,7 @@ btnConverter.addEventListener('click', function() {
         default:
             aviso.textContent = 'Escolha uma moeda estrangeira'
     }
-    isNaN(moedaConvertida) ? moedaConvertida = 0 : ''
+    isNaN(velocidadeConvertida) ? velocidadeConvertida = 0 : ''
 })
 
 btnLimpar.addEventListener('click', function() {
@@ -134,7 +134,4 @@ btnLimpar.addEventListener('click', function() {
     moedaSelecionada[5].checked = false
     moedaSelecionada[6].checked = false
     moedaSelecionada[7].checked = false
-    moedaSelecionada[8].checked = false
-    moedaSelecionada[9].checked = false
-    moedaSelecionada[10].checked = false
 })
