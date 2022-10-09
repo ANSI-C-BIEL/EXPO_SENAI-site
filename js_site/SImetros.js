@@ -60,17 +60,17 @@ btnConverter.addEventListener('click', function() {
     switch(conversorDeMetros) {
         
         case 'KM':
-            metrosConvertido = valorEmMetros * 1000
+            metrosConvertido = valorEmMetros / 1000
             mensagemFormatada(metrosConvertido)
         break
 
         case 'HM':
-            metrosConvertido = valorEmMetros * 100
+            metrosConvertido = valorEmMetros / 100
             mensagemFormatada(metrosConvertido)
         break
 
         case 'DAM':
-            metrosConvertido = valorEmMetros * 10
+            metrosConvertido = valorEmMetros / 10
             mensagemFormatada(metrosConvertido)
         break
 
@@ -80,17 +80,17 @@ btnConverter.addEventListener('click', function() {
         break
         
         case 'DM':
-            metrosConvertido = valorEmMetros / 10
+            metrosConvertido = valorEmMetros * 10
             mensagemFormatada(metrosConvertido)
         break
 
         case 'CM':
-            metrosConvertido = valorEmMetros / 100
+            metrosConvertido = valorEmMetros * 100
             mensagemFormatada(metrosConvertido)
         break 
 
         case 'MM':
-            metrosConvertido = valorEmMetros / 1000
+            metrosConvertido = valorEmMetros * 1000
             mensagemFormatada(metrosConvertido)
         break
 
